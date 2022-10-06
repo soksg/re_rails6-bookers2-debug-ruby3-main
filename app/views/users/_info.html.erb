@@ -1,17 +1,17 @@
 <table class='table'>
-  <tr><%= image_tag user.get_profile_image, size(100,100) %></tr>
+  <tr><%= image_tag @book.user.get_profile_image(100,100) %></tr>
   <tr>
 	  <th>name</th>
-	  <th><%= user.name %></th>
+	  <th><%= @book.user.name %></th>
   </tr>
   <tr>
 	  <th>introduction</th>
-	  <th><%= user.introduction %></th>
+	  <th><%= @book.user.introduction %></th>
   </tr>
 </table>
 
 <div>
-  <%= link_to edit_user_path(user), class: "btn btn-outline-secondary btn-block" do %>
+  <%= link_to edit_user_path(@book.user.id), class: "btn btn-outline-secondary btn-block" do %>
     <i class="fas fa-user-cog"></i>
   <% end %>
 </div>
