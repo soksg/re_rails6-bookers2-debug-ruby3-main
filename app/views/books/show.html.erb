@@ -22,9 +22,10 @@
             <td><%= link_to 'Destroy', book_path(@book), method: :delete, data: { confirm: '本当に消しますか？' }, class: "btn btn-sm btn-danger"%></td>
           <% end %>
           <%= render 'favorites/favorite', book: @book %>
-          <td>コメント数：</td>
+            <td>コメント数：<%= @book.book_comments.count %></td>
         </tr>
       </table>
+      <%= render 'book_comments/book_comment', book: @book, book_comment: @book_comment %>
     </div>
   </div>
 </div>
