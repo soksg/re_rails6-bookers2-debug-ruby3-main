@@ -1,4 +1,1 @@
-$(".comment_delete").html("<%= j( render 'book_comments/comments', book: book, book_comment: book_comment )%>");
-
-$("textarea").val('');
-
+$("#comments_area").html("<%= j(render 'book_comments/comments', book: @book, book_comment: @book_comment) %>");

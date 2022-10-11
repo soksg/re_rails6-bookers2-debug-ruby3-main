@@ -1,0 +1,7 @@
+<div>
+  <%= form_with(model: [book, book_comment], url: book_book_comments_path(book), local: false) do |f| %>
+    <%= f.text_area :comment %>
+    <br>
+    <%= f.submit '送信' %>
+  <% end %>
+</div>
